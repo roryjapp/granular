@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+<head>
+  <title>Granular app</title>
+  <meta name="description" content="The standard of mobile photography now available on iOS and Android">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="css/granular.css">
+</head>
+<body>
+  <header>
+    <h1>
+      <img src="images/logo.png" alt="granular logo">
+    </h1>
+    <!-- The below anchor tag doesnt click through to an outside link. Instead it links to another page on the site. -->
+    <a href="#first-section" class="scroll-to">
+      <!--we create a class for the arrow buttons so in javascript we can apply the same rule for all three and not have to do them individually.-->
+      <img src="images/arrow.png">
+    </a>
+  </header>
+    <section class="intro" id="first-section">
+      <h2>Granular App is now available for iOS & Android.</h2>
+      <img src="images/app-hero.png">
+    </section>
+
+    <section class="feature">
+      <h2>Perfectly In Shot </h2>
+      <p>The standard of mobile photography, now for iOS and Android. New features include and redesigned UI and advanced camera controls, including manual focus, shutter speed, white balance, and exposure compensation for unprecedented creative control.</p>
+
+      <a href="#second-section" class="scroll-to">
+        <img src="images/green-arrow.png">
+      </a>
+      <img src="images/viewfinder.png">
+    </section>
+
+    <section class="feature" id="second-section">
+      <h2> Filters Galore </h2>
+      <p>Simplify the editing process with new features and enhancements. Use one of our custom designed filters or apply multiple ones to create your own custom effects. Adjust the parameters of each to suit the mood of your photos.</p>
+
+    <a href="#blue-lagoon" class="scroll-to">
+      <img src="images/green-arrow.png">
+    </a>
+    <img src="images/filters.png">
+    </section>
+
+<!-- ID's are used to uniquely identify elements in the same way as classes, however they can only be used once per page. Here we use the class scroll-effect on each section, as the styling will be the same. We will use the ID's to set the backgrounds -->
+
+<section class="scroll-effect" id="blue-lagoon">
+ <h3>TRI-X</h3>
+</section>
+<section class="scroll-effect" id="pool">
+ <h3>Porta</h3>
+</section>
+<section class="scroll-effect" id="forest">
+  <h3>Neopan</h3>
+</section>
+<section class="scroll-effect" id="boat">
+ <h3>Provia</h3>
+</section>
+<section class="scroll-effect" id="river">
+ <h3>Time Zero</h3>
+</section>
+
+<section class="subscribe">
+  <h2>Subscribe to our newsletter for app updates</h2>
+
+  <!-- Begin MailChimp Signup Form -->
+<div id="mc_embed_signup">
+<form action="http://facebook.us12.list-manage.com/subscribe/post?u=41896da05dcceb4d5e24c6637&amp;id=b943191ac5" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+    <div id="mc_embed_signup_scroll">
+
+<div class="mc-field-group">
+	<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder='Email Address'>
+</div>
+	<div id="mce-responses" class="clear">
+		<div class="response" id="mce-error-response" style="display:none"></div>
+		<div class="response" id="mce-success-response" style="display:none"></div>
+	</div>    <!-- Honey trap: real people should not fill this in and expect good things - do not remove this or risk form bot signups. this div style has a a second inout area that cannot be seen by humans, but my bots.-->
+    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_41896da05dcceb4d5e24c6637_b943191ac5" tabindex="-1" value=""></div>
+    <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+    </div>
+</form>
+</div>
+<!--End mc_embed_signup-->
+</section>
+
+  <footer>
+    <small>&copy; 2015 Granular Inc</small>
+    <a href="#">Facebook</a>
+    <a href="#">Twitter</a>
+    <a href="#">Instagram</a>
+  </footer>
+  <script src="js/jquery.js"></script>
+  <script src="js/granular.js"></script>
+</body>
+</html>
