@@ -1,0 +1,185 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300);
+
+body {
+  /*As we are using a google font, the font-family has to be in qoutation marks*/
+  font-family: "lato", sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #24292d;
+  text-align: center;
+}
+
+header {
+  /*background properties can be put in the same property, except for background-size. We want to see the image in the middle so we put a center property. And we don't want tiling on older web browsers so we add a no-repeat property.*/
+  background: url(../images/mountain.jpg) center no-repeat; /*to add in an image you can use background image but then you would have to use background-position as well. In the above example we are using the shorthand.*/
+  background-size: cover;
+  /*To make the header the height of our browser window, whichever size it may be, we use 100vh - or viewport height. We also have vw, whcih is viewport width. 100vh essentially means 100% Viewport height.*/
+  height: 100vh;
+}
+
+h1 {
+  /*Remember position absolute allows us to move an element away from it's normal position, fixed will keep stuck to top of the screen whilst we scroll down to the bottom of a page. Following on from the position type you need to add top and left properties.*/
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /*To move the logo into the middle of the page, first set top: 50% and left: 50%. However the logo looks off center, so we need to adjust the positioning as elements are moved from their top left co-ordinates.  */
+  margin: -132px 0 0 -250px;
+  /*To get the image into the middle, we need to move it half of it's width and half of it's height, so check your image size using inspect element and adjust accordingly = 500x264 px*/
+}
+
+/*We need to move the button that scrolls the page down, so we go back to our html to find it. It's an anchor tag in the header so header a*/
+header a {
+  position: absolute;
+  bottom: 40px;
+}
+
+.intro {
+  background-color: #e0e3e6;
+  padding: 50px 0;
+}
+
+h2 {
+  font-size: 26px;
+  font-weight: 300;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+}
+
+.feature {
+  padding: 60px;
+  max-width: 860px;
+  /* This pushes content to the left because max-width is set from the left. the text-align property used above is working, but cannot be used to center block elements. We need to add a margin: 0 auto 0 auto;*/
+  margin: 0 auto 0 auto;
+}
+
+p {
+  margin-bottom: 20px;
+}
+
+.feature a {
+  display: block;
+  margin-bottom: 20px;
+}
+
+#blue-lagoon {
+  background-image: url(../images/blue-lagoon.jpg);
+}
+
+#pool {
+  background-image: url(../images/pool.jpg);
+}
+
+#forest{
+  background-image: url(../images/forest.jpg);
+}
+
+#boat {
+  background-image: url(../images/boat.jpg);
+}
+
+#river {
+  background-image: url(../images/river.jpg);
+}
+
+.scroll-effect {
+  height: 100vh;
+  background: center no-repeat;
+  background-size: cover;
+  /*Create window scroll effect where images looked fixed in place and scroll over one another aka a parallax effect.*/
+  background-attachment: fixed;
+  /*We apply a position: relative for the h3 elements below.*/
+  position: relative;
+}
+
+h3 {
+  color: #ffffff;
+  font-size: 42px;
+  text-transform: uppercase;;
+  font-weight: 300;
+  /* We want to move the titles to the bottom of each number so we need to apply a position: absolute property so that we can move them from their original positions. We want them to be set off the bottom so we apply a bottom property of 20px.*/
+  position: absolute;
+  /*Position;abosulte and position:fixed, when applied to elements defaults their position to the top of the browser window, to change this, we need to say where we want to position these elements relative to. Here we want to position them within their sections, so must apply position: relative to the scroll-effect class. */
+  bottom: 20px;
+/* When using position absolute or fixed, we lose the defualt width of our elemetns. To get text-align: center working again, we reset the width to 100%.*/
+  width: 100%
+}
+
+.subscribe {
+  background-color: #f3f4f5;
+  padding: 50px 0;
+}
+
+form {
+  width: 100%
+}
+
+input {
+  width: 60%;
+  padding: 8px;
+  border: 2px solid #24292d;
+  outline: none;
+  margin: 10px 0;
+  text-align: center;
+  /*transitions allow us to animate css properties. Here we want the border color to gradually changed from grey to green. You must apply the transition property to the normal state. Transitions take three values, the property you want to change (ie border-color), the duration and the timing-function (ie. easing).*/
+  transition: border-color 0.3s ease-in-out, width 0.3s ease-in-out;
+  /*Changed from border-color, if transitioning more than one property at a time, use 'all' to transition all changes between states*/
+
+
+}
+
+input:focus {
+  border-color: #16b898;
+
+}
+
+/*Make sure there are no spaces between the input and the opening square brakcets*/
+input[type="submit"] {
+  cursor: pointer;
+  text-transform: uppercase;
+  background-color: transparent;
+}
+
+input[type="submit"]:hover {
+  border-color: #16b989;
+  width: 70%;
+}
+
+footer {
+  padding: 50px 0;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 300;
+}
+
+footer a {
+  text-decoration: none;
+  color: #24292d;
+  margin: 0 10px;
+}
+
+small {
+  color: #e0e3e6;
+}
+
+@media screen and (max-width: 860px){
+  /*the h1 needs to be changed. Reset the h1 to make it sit where it was originally found, within the flow of the page. In this caset the position has been set to absolute and needs to be changed to static.*/
+  h1 {
+    position: static;
+    /*the previous margin property is pushing the h1 logo off the page so it needs to be removed.*/
+    margin: 0;
+    /*It's now sitting a bit too close to the sides, so we need to add some padding to push it away from teh top, left, bottom and right.*/
+    padding: 20px;
+  }
+  /* the spaces need to reduced in the .intro, the .feature and the .subscribe sections. These can all be done at the same time as shown below.*/
+  .intro, .feature, .subscribe {
+    padding: 20px;
+  }
+  /*The form needs to be changed as well, its a bit too big for a mobile screen, especially in comparison to everything else. We probably want it to be 80% of its original size.*/
+  input {
+    width: 80%;
+  }
+  /* The boxes themselves expand a bit too much on small screens so lets reduce the increase to 90%.*/
+  input[type="submit"]:hover {
+    width: 90%;
+  }
+}
