@@ -1,0 +1,32 @@
+Fonts:
+Lato 400, 300
+
+Color:
+text color: #24292d
+Announcement background: #e0e3e6
+Subscribe background: #f3f4f5
+footer text color: #e0e3e6
+
+
+Announcement copy:
+Granular App is now Available for iOS & Android
+
+Subscribe copy:
+Subscribe to our newsletter for app updates
+
+Feature copy:
+Perfectly in shot
+
+The standard of mobile photography, now for iOS and Android. New features include and redesigned UI and advanced camera controls, including manual focus, shutter speed, white balance, and exposure compensation for unprecedented creative control.
+
+Second feature copy:
+Filters Galore
+
+Simplify the editing process with new features and enhancements. Use one of our custom designed filters or apply multiple ones to create your own custom effects. Adjust the parameters of each to suit the mood of your photos.
+
+Filter names:
+TRI-X
+Portra
+Neopan
+Provia
+Time-Zero
